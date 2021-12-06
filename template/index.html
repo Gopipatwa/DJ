@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django hosting testing on Heroku</title>
+    <style>
+        span{
+            color:green;
+            padding-left: 5%;
+        }
+    </style>
+</head>
+<body style="background-color: #30130a;">
+    <h1 style="text-align: center;color: aliceblue;">Hello world</h1>
+    {% if contact is None %}
+    <h2 style="text-align: center;color: red;">Data Not Found</h2>
+    {% else %}
+    {% for c in contact %}
+    <div class="container" style="align-items: center;margin: 20px;color: goldenrod;justify-content: center;">
+        <div class="content" style="background-color: #303030; padding: 20px;text-align: left;">
+    <h4>Name:<span>{{ c.name }}</span></h4>
+    <h4>Username:<span>{{ c.username }}</span></h4>
+    <h4>Email:<span>{{ c.email }}</span></h4>
+    <h4>Desc:<span>{{ c.desc }}</span></h4>
+    <h4>Create Date:<span>{{ c.created_at }}</span></h4>
+        
+</div>
+    
+    
+    
+</div>
+    {% endfor %}
+    {% endif %}
+</body>
+</html>
